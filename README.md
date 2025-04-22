@@ -112,7 +112,7 @@ These were injected into Jenkins pipeline securely. Backend connects to DynamoDB
 
 ## Author
 
-**Harish284** – Full-Stack Cloud DevOps Engineer  
+**Harish-s* – Full-Stack Cloud DevOps Engineer  
 🔗 GitHub: [github.com/harish284](https://github.com/harish284)
 
 ---
