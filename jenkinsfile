@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    environment {
+        FRONTEND_IMAGE = 'harish2810/movie-frontend:latest'
+        BACKEND_IMAGE = 'harish2810/movie-backend:latest'
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/harish284/Movie_Booking_System.git'
+            }
+        }
+
+        stage('Build Backend Docker Image') {
+            steps {
+                script {
+                    sh '''
+                        docker build -f backend.dockerfile -t $BACKEND_IMAGE ./server
+                    '''
+                }
+            }
+        }
+
+        stage('Build Frontend Docker Image') {
+            steps {
+                script {
+                    sh '''
+                        docker build -f frontend.dockerfile -t $FRONTEND_IMAGE ./client
+                    '''
+                }
+            }
+        }
+
+        stage('Push Docker Images') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh '''
+                            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                            docker push $FRONTEND_IMAGE
+                            docker push $BACKEND_IMAGE
+                        '''
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Docker images have been pushed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
