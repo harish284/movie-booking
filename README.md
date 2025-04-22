@@ -82,7 +82,7 @@ docker-compose up --build
 
 > Add all other API for other workflows
 
-> [✅ You can integrate Swagger later for UI-based docs.]
+> [ You can integrate Swagger later for UI-based docs.]
 
 ---
 
