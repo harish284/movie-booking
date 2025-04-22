@@ -79,6 +79,9 @@ docker-compose up --build
 | api/auth/getMovies | GET    | List all movies       |
 | api/auth/addMovies | POST   | Add  movies           |
 
+
+> Add all other API for other workflows
+
 > [✅ You can integrate Swagger later for UI-based docs.]
 
 ---
