@@ -14,7 +14,7 @@ A full-stack **movie ticket booking application** built using:
 ## 📁 Project Structure
 
 ```
-movie-booking/
+Movie_ticket_booking/
 ├── client/                    # React frontend
 ├── server/                    # Node.js backend using DynamoDB
 ├── frontend.dockerfile
