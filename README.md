@@ -6,7 +6,7 @@ A full-stack **movie ticket booking application** built using:
 - **Backend**: Node.js + Express
 - **Database**: AWS DynamoDB
 - **CI/CD**: Jenkins (Build & Push Docker Images)
-- **Deployment**: AWS ECS (Fargate)
+- **Deployment**: AWS ECS (Fargate) or EBS
 - **Containerization**: Docker + Docker Compose
 
 ---
