@@ -155,7 +155,7 @@ docker-compose up --build
 
 ---
 
-## 🔐 AWS Credentials (Secure)
+## AWS Credentials (Secure)
 
 Stored securely via Jenkins credentials or ECS Task Definitions:
 
