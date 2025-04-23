@@ -151,8 +151,7 @@ docker-compose up --build
 ### 🔁 Workflow
 
 1. Jenkins pulls code from GitHub
-2. Uses `docker-compose` to build frontend & backend images
-3. Pushes images to DockerHub or AWS ECR
+2. Pushes images to DockerHub or to AWS
 
 ---
 
