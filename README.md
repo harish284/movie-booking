@@ -177,4 +177,4 @@ These are used in the backend to connect to **AWS DynamoDB** using the AWS SDK.
 
 ## 📄 License
 
-MIT © 2025 Harish284
+MIT © 2025 Harish S
