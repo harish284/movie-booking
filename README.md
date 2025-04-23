@@ -153,7 +153,6 @@ docker-compose up --build
 1. Jenkins pulls code from GitHub
 2. Uses `docker-compose` to build frontend & backend images
 3. Pushes images to DockerHub or AWS ECR
-4. Triggers ECS Fargate deployment using latest images
 
 ---
 
